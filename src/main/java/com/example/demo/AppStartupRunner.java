@@ -13,6 +13,13 @@ public class AppStartupRunner implements ApplicationRunner {
     private AutoService autoService;
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        generateData();
+    }
+
+    public void generateData() {
         autoService.saveAuto(new Auto("BMW"));
+        autoService.saveAuto(new Auto("Volkswagen"));
+        autoService.saveAuto(new Auto("Tesla"));
+        autoService.saveAuto(new Auto("Toyota"));
     }
 }
